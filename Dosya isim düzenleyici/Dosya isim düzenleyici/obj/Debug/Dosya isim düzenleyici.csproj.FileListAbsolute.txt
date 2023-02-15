@@ -1,0 +1,10 @@
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\bin\Debug\Dosya isim düzenleyici.exe.config
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\bin\Debug\Dosya isim düzenleyici.exe
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\bin\Debug\Dosya isim düzenleyici.pdb
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.AssemblyReference.cache
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya_isim_düzenleyici.Form1.resources
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya_isim_düzenleyici.Properties.Resources.resources
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.GenerateResource.cache
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.CoreCompileInputs.cache
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.exe
+C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.pdb
