@@ -8,3 +8,13 @@ C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\o
 C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.CoreCompileInputs.cache
 C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.exe
 C:\Users\Alihan Dursun\Desktop\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.pdb
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.AssemblyReference.cache
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya_isim_düzenleyici.Form1.resources
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya_isim_düzenleyici.Properties.Resources.resources
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.GenerateResource.cache
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.csproj.CoreCompileInputs.cache
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.exe
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\obj\Debug\Dosya isim düzenleyici.pdb
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\bin\Debug\Dosya isim düzenleyici.exe.config
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\bin\Debug\Dosya isim düzenleyici.exe
+C:\Users\AlihanDursun\Desktop\Yeni klasör\3\Dosya_isim_duzenleyici\Dosya isim düzenleyici\Dosya isim düzenleyici\bin\Debug\Dosya isim düzenleyici.pdb

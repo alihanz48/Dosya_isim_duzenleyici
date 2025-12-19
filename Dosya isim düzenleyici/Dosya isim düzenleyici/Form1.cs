@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics.Tracing;
 
 namespace Dosya_isim_düzenleyici
 {
@@ -33,17 +34,14 @@ namespace Dosya_isim_düzenleyici
                     listBox1.Items.Add(dsyuzad.Substring(yol.Length + 1));
                 }
             }
-            dsyuzanti();
         }
 
 
-        string uzanti = "";
-        private void dsyuzanti()
+        private string dsyuzanti(string dsyisim)
         {
             int nindex = 0;
             //Uzantıyı elde etmek için döngü
-            foreach (String dsyisim in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
-            {
+
                 for (int j = dsyisim.Length - 1; j >= 0; j--)
                 {
                     if (dsyisim[j] == '.')
@@ -52,88 +50,113 @@ namespace Dosya_isim_düzenleyici
                         break;
                     }
                 }
-                uzanti = dsyisim.Substring(nindex);
-                break;
+                return dsyisim.Substring(nindex);
             }
             
-        }
         
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked==true|| radioButton2.Checked == true|| radioButton3.Checked == true|| radioButton4.Checked == true|| radioButton5.Checked == true)
+            if (folderBrowserDialog1.SelectedPath!="")
             {
-                listBox2.Items.Clear();
-                if (radioButton1.Checked == true)
+                if (radioButton1.Checked == true || radioButton2.Checked == true || radioButton3.Checked == true || radioButton4.Checked == true||radioButton5.Checked==true)
                 {
-                    int i = 1;
-                    foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
+                    listBox2.Items.Clear();
+                    if (radioButton1.Checked == true)
                     {
-                        dsyuzanti();
-                        File.Move(item, yol + "\\" + i.ToString() + uzanti);
-                        i++;
-                    }
-                }
-                else if (radioButton2.Checked == true)
-                {
-
-                    foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
-                    {
-                        dsyad = item.Substring(yol.Length + 1);
-                        File.Move(item, yol + "\\" + dsyad.ToUpper());
-                    }
-                }
-                else if (radioButton3.Checked == true)
-                {
-                    foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
-                    {
-                        dsyad = item.Substring(yol.Length + 1);
-                        File.Move(item, yol + "\\" + dsyad.ToLower());
-                    }
-                }
-                else if (radioButton4.Checked == true)
-                {
-                    foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
-                    {
-                        dsyad = item.Substring(yol.Length + 1);
-
-                        for (int i = 0; i < dsyad.Length; i++)
+                        int i = 1;
+                        foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
                         {
-                            if (i == 0)
-                            {
-                                string ihrf = dsyad[0].ToString().ToUpper();
-                                dsyad = dsyad.Remove(0, 1);
-                                dsyad = ihrf + dsyad;
-                            }
-                            if (dsyad[i] == ' ')
-                            {
-                                string byk = dsyad[i + 1].ToString().ToUpper();
-                                dsyad = dsyad.Remove(i + 1, 1);
-                                dsyad = dsyad.Insert(i + 1, byk);
-                            }
+                            
+                            File.Move(item, yol + "\\" + i.ToString() + dsyuzanti(item));
+                            i++;
                         }
-                        File.Move(item, yol + "\\" + dsyad);
                     }
-                }
-                else if (radioButton5.Checked == true)
-                {
+                    else if (radioButton2.Checked == true)
+                    {
+
+                        foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
+                        {
+                            dsyad = item.Substring(yol.Length + 1);
+                            File.Move(item, yol + "\\" + dsyad.ToUpper());
+                        }
+                    }
+                    else if (radioButton3.Checked == true)
+                    {
+                        foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
+                        {
+                            dsyad = item.Substring(yol.Length + 1);
+                            File.Move(item, yol + "\\" + dsyad.ToLower());
+                        }
+                    }
+                    else if (radioButton4.Checked == true)
+                    {
+                        foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
+                        {
+                            dsyad = item.Substring(yol.Length + 1);
+                            string[] words = { };
+                            words = dsyad.Split(' ');
+                            dsyad = "";
+
+
+                            for (int i = 0; i <= words.Length-1; i++)
+                            { 
+                                string nword = words[i].ToLower();
+                                nword = nword[0].ToString().ToUpper() + nword.Substring(1, nword.Length - 1);
+                                words[i] = nword;
+                            }
+                            for (int i =0;i<=words.Length-1;i++)
+                            {
+                                dsyad += words[i];
+                                if (i != words.Length - 1)
+                                {
+                                    dsyad += " ";
+                                }
+                            }
+
+                            try
+                            {
+                                File.Move(item, yol + "\\" + dsyad);
+                            }
+                            catch (Exception) { }
+
+                            
+                        }
+                    }
+                    else if (radioButton5.Checked==true)
+                    {
+                        foreach (string dosya in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
+                        {
+                            string dosyaadi = "";
+                            string[] words = { };
+                            words = dosya.Substring(yol.Length + 1).Split('.');
+                            words[words.Length - 1] ="."+textBox1.Text;
+                            for (int i = 0; i <= words.Length-1; i++)
+                            {
+                                dosyaadi += words[i].ToString();
+                            }
+                            try
+                            {
+                                File.Move(dosya, yol + "\\" + dosyaadi);
+                            }
+                            catch (Exception) { }
+
+                        }
+                    }
                     foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
                     {
-                        dsyuzanti();
-                        dsyad = item.Substring(yol.Length + 1);
-                        dsyad = dsyad.Substring(0, dsyad.Length - uzanti.Length);
-                        dsyad = dsyad + "." + textBox1.Text;
-                        File.Move(item, yol + "\\" + dsyad);
+                            listBox2.Items.Add(item.Substring(yol.Length + 1));
                     }
                 }
-                foreach (string item in Directory.GetFiles(folderBrowserDialog1.SelectedPath))
+                else
                 {
-                    listBox2.Items.Add(item.Substring(yol.Length + 1));
+                    MessageBox.Show("Lütfen bir eylem seçiniz");
                 }
             }
             else
             {
-                MessageBox.Show("Lütfen bir eylem seçiniz");
+                MessageBox.Show("Dosyaları al butonuna basarak dosya isimlerini işleyeceğiniz klasörü seçmelisiniz!");
             }
+            
             
         }
     }
